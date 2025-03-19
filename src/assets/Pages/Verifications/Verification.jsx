@@ -57,6 +57,9 @@ const Verification = () => {
     return (
         <div className="flex  items-center p-6 rounded-md mt-20 justify-evenly max-w-6xl space-y-16 ">
             <div>
+
+
+                
                 <img src={alwaysimg} alt="" />
             </div>
             <div className="text-center">
