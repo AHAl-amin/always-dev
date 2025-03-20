@@ -55,11 +55,11 @@ const Verification = () => {
     }; 
 
     return (
-        <div className="flex  items-center p-6 rounded-md mt-20 justify-evenly max-w-6xl space-y-16 ">
+        <div className="flex  items-center p-6 rounded-md mt-20 justify-evenly max-w-6xl  ">
             <div>
                 <img src={alwaysimg} alt="" />
             </div>
-            <div className="text-center">
+            <div className="text-center space-y-6">
                 <p className="text-[20px] ">Congratulations! <br />
                     Pleas enter your 6 digit code </p>
                 <h2 className="text-[40px] font-semibold ">Verification Code</h2>

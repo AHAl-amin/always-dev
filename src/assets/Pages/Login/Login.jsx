@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoEyeOutline , IoEyeOffOutline } from "react-icons/io5";
 
 function Login() {
+
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="flex items-center gap-6 justify-evenly md:flex-row flex-col mt-10 ">
       <div className="">
@@ -37,14 +40,22 @@ function Login() {
               <br />
             </div>
 
-            <div className="text-[#364636]">
+            <div className="relative text-[#364636] ">
               <span className="text-[#364636] mb-1"> Password </span> <br />
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 namë="password"
-                className="w-full border border-[#8CAB91] rounded-sm p-1 "
+                className=" w-full border  border-[#8CAB91] rounded-sm p-1 "
                 placeholder="********"
-              />{" "}
+              />
+              <div className="absolute top-8 right-4 "
+              
+              onClick={() => setShowPassword(!showPassword)}>
+           
+
+
+              {showPassword ? <IoEyeOffOutline /> : <IoEyeOutline />}
+              </div>
               <br />
             </div>
             <div className="space-y-6">
@@ -60,8 +71,10 @@ function Login() {
                 </div>
               </div>
 
-              <div>
-                <input className="btn text-center mx-auto flex items-center bg-[#8CAB91] w-4/5 uppercase text-[16px] text-[#FAF1E6] rounded-[20px] py-2" type="button " name="submit" id="" value='sing in' />
+              <div className="justify-center flex">
+                <button className=" text-center   items-center bg-[#8CAB91] w-4/5 uppercase text-[16px] text-[#FAF1E6] rounded-[20px] py-2" type="button " name="submit" id=""  
+                 
+                > sing in  </button>
               </div>
             </div>
           </div>
@@ -71,8 +84,5 @@ function Login() {
   );
 }
 
-<<<<<<< HEAD
+
 export default Login;
-=======
-export default Login;
->>>>>>> ab8cd12 (added verification pert)
